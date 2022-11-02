@@ -1,0 +1,276 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  &.active {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__container {
+    background-color: white;
+    height: 300px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .fa-check {
+      background-color: green;
+      color: white;
+      font-size: 100px;
+      padding: 30px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    .fa-x {
+      background-color: tomato;
+      color: white;
+      font-size: 100px;
+      padding: 30px 40px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    &_x {
+      color: black;
+      font-size: 70px;
+      position: absolute;
+      right: 30px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.section {
+  &__pitsa {
+    &-title {
+      font-weight: 400;
+      font-size: 35px;
+      text-align: center;
+      padding: {
+        top: 25px;
+        bottom: 25px;
+      }
+    }
+    &_container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 90%;
+      &_box {
+        &_result {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin: {
+            top: 20px;
+            bottom: 20px;
+          }
+          &-title {
+            font-size: 20px;
+          }
+          &-paragraph {
+            font-size: 20px;
+          }
+        }
+        &_results {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin: {
+            top: 20px;
+            bottom: 20px;
+          }
+          &-title {
+            font-size: 20px;
+          }
+          &-paragraph {
+            font-size: 20px;
+          }
+        }
+        &_list {
+          &_item {
+            &-title {
+              font-size: 20px;
+              margin: {
+                bottom: 10px;
+              }
+            }
+          }
+          &-item {
+            font-size: 20px;
+            margin: {
+              top: 10px;
+              bottom: 10px;
+            }
+          }
+        }
+        &_lists {
+          &_item {
+            &-title {
+              font-size: 20px;
+              margin: {
+                bottom: 10px;
+              }
+            }
+          }
+          &-item {
+            font-size: 20px;
+            margin: {
+              top: 10px;
+              bottom: 10px;
+            }
+          }
+        }
+        &-title {
+          font-size: 20px;
+          &.second {
+            margin: {
+              top: 30px;
+              bottom: 15px;
+            }
+          }
+        }
+        &-btn {
+          padding: {
+            top: 15px;
+            bottom: 15px;
+            right: 30px;
+            left: 30px;
+          }
+          font-size: 20px;
+          background-color: tomato;
+          border: 1px solid tomato;
+          color: white;
+          margin: {
+            top: 30px;
+          }
+          transition: all 0.3s linear;
+          &:hover {
+            background-color: transparent;
+            color: tomato;
+          }
+        }
+        &_select {
+          margin: {
+            top: 10px;
+            bottom: 50px;
+          }
+          width: 50%;
+          padding: {
+            top: 5px;
+            bottom: 5px;
+          }
+          font-size: 20px;
+          outline: none;
+          cursor: pointer;
+        }
+        &_sizes {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin: {
+            top: 30px;
+          }
+          gap: 50px;
+          &-size {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 1000;
+            cursor: pointer;
+            &.active {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
+        &_form {
+          display: flex;
+          justify-content: space-between;
+          width: 150%;
+          &_box {
+            display: flex;
+            flex-direction: column;
+            &_label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 20px;
+              &-input {
+                height: 30px;
+                width: 30px;
+                margin: {
+                  top: 5px;
+                  bottom: 5px;
+                }
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        &_forms {
+          display: flex;
+          justify-content: space-between;
+          width: 150%;
+          &_box {
+            display: flex;
+            flex-direction: column;
+            &_label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 20px;
+              &-input {
+                height: 30px;
+                width: 30px;
+                margin: {
+                  top: 5px;
+                  bottom: 5px;
+                }
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        #form {
+          width: 98%;
+        }
+      }
+      &_box.second {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 2px;
+          background-color: black;
+          top: 0;
+          right: 240px;
+        }
+      }
+    }
+  }
+}

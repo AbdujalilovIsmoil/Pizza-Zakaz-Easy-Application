@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ****GLOBAL META TAGS**** -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ****CDNJS LIBRARIES**** -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ****SITE META TAGS**** -->
+  <meta name="author" content="Abdujalilov Ismoil" />
+  <meta name="description" content="150 words" />
+  <meta name="og:title" content="Site sarlavhasi" />
+  <meta name="og:description" content="Site haqida malumot" />
+  <meta name="og:image" content="Site rasmi" />
+  <meta name="og:site_name" content="Pitsa" />
+  <!-- ****MAIN CSS**** -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>Pizza-Zakaz</title>
+</head>
+
+<body>
+  <div class="modal">
+    <div class="modal__container">
+      <div class="modal__container_x">
+        &times;
+      </div>
+      <i class="fa fa-check" id="check"></i>
+    </div>
+  </div>
+  <!-- ****PITSA START**** -->
+  <!-- ****SECTION START**** -->
+  <section class="section">
+    <div class="container">
+      <div class="section__pitsa">
+        <h1 class="section__pitsa-title">Pitsa buyurtma qilish</h1>
+        <div class="section__pitsa_container">
+          <div class="section__pitsa_container_box">
+            <h2 class="section__pitsa_container_box-title">
+              Noni qanday bo'lsin?
+            </h2>
+            <select class="section__pitsa_container_box_select">
+              <option value="Yupqa">Yupqa</option>
+              <option value="O'rtacha">O'rtacha</option>
+              <option value="Qalin">Qalin</option>
+            </select>
+            <h2 class="section__pitsa_container_box-title">Kattaligi</h2>
+            <div class="section__pitsa_container_box_sizes">
+              <div class="section__pitsa_container_box_sizes-size active">25cm</div>
+              <div class="section__pitsa_container_box_sizes-size">30cm</div>
+              <div class="section__pitsa_container_box_sizes-size">35cm</div>
+            </div>
+            <h2 class="section__pitsa_container_box-title second">
+              Ustiga nima solaylik?
+            </h2>
+            <form class="section__pitsa_container_box_form">
+              <div class="section__pitsa_container_box_form_box">
+                <label for="Pomidor" class="section__pitsa_container_box_form_box_label">
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- pomidor" />
+                  Pomidor
+                </label>
+                <label for="Kurka go'shti" class="section__pitsa_container_box_form_box_label">
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input"
+                    value="- kurka go'shti" />
+                  Kurka go'shti
+                </label>
+                <label for="Zaytun" class="section__pitsa_container_box_form_box_label">
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- zaytun" />
+                  Zaytun
+                </label>
+              </div>
+              <div class="section__pitsa_container_box_form_box">
+                <label for="Tuzlangan Bodring" class="section__pitsa_container_box_form_box_label">
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input"
+                    value="- tuzlangan bodring" />
+                  Tuzlangan Bodring
+                </label>
+                <label for="Qo'ziqorin" class="section__pitsa_container_box_form_box_label">
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- qo'ziqorin" />
+                  Qo'ziqorin
+                </label>
+                <label for="Qazi" class="section__pitsa_container_box_form_box_label">
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- qazi" />
+                  Qazi
+                </label>
+              </div>
+              <h2 class="Qo'shimchalar"></h2>
+            </form>
+            <h2 class="section__pitsa_container_box-title second">Qo'shimchalar</h2>
+
+
+            <form class="section__pitsa_container_box_forms" id="form">
+              <label for="Achichiq" class="section__pitsa_container_box_forms_box_label">
+                <input class="section__pitsa_container_box_forms_box_label-input" type="checkbox" value="- achchiq" />
+                Achichiq
+              </label>
+              <label for="Sosiskali" class="section__pitsa_container_box_forms_box_label">
+                <input class="section__pitsa_container_box_forms_box_label-input" type="checkbox" value="- sosiskali" />
+                Sosiskali
+              </label>
+            </form>
+
+
+          </div>
+
+
+          <div class="section__pitsa_container_box second">
+            <div class="section__pitsa_container_box_result">
+              <h2 class="section__pitsa_container_box_result-title">Non:</h2>
+              <p class="section__pitsa_container_box_result-paragraph">
+                Yupqa
+              </p>
+            </div>
+            <div class="section__pitsa_container_box_results">
+              <h2 class="section__pitsa_container_box_results-title">
+                Kattaligi:
+              </h2>
+              <p class="section__pitsa_container_box_results-paragraph">
+                30 cm
+              </p>
+            </div>
+            <ul class="section__pitsa_container_box_list">
+              <li class="section__pitsa_container_box_list_item">
+                <h2 class="section__pitsa_container_box_list_item-title">
+                  Ustida:
+                </h2>
+              </li>
+            </ul>
+            <ul class="section__pitsa_container_box_lists">
+              <li class="section__pitsa_container_box_lists_item">
+                <h2 class="section__pitsa_container_box_lists_item-title">
+                  Qo'shimcha:
+                </h2>
+              </li>
+            </ul>
+            <button class="section__pitsa_container_box-btn" type="button">
+              Buyurtma berish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ****SECTION END**** -->
+  <!-- ****PITSA END**** -->
+
+  <script src="./js/utilits.js"></script>
+  <script defer src="./js/index.js"></script>
+</body>
+
+</html>

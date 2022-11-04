@@ -148,3 +148,11 @@ $("#modal-remove").addEventListener("click", () => {
     $("#modal-remove").setAttribute("href", "index.html");
   }
 });
+
+$("#shop-cart").addEventListener("click",()=> {
+  if($("#section-pitsa-second").classList.contains("active")){
+    $("#section-pitsa-second").classList.remove("active");
+  }else {
+    $("#section-pitsa-second").classList.add("active");
+  }
+});

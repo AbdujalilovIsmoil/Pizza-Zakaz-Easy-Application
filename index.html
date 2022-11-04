@@ -25,7 +25,7 @@
 <body>
   <div class="modal">
     <div class="modal__container">
-      <div class="modal__container_x">
+      <div class="modal__container_x" id="modal-remove">
         &times;
       </div>
       <i class="fa fa-check" id="check"></i>
@@ -42,16 +42,16 @@
             <h2 class="section__pitsa_container_box-title">
               Noni qanday bo'lsin?
             </h2>
-            <select class="section__pitsa_container_box_select">
+            <select class="section__pitsa_container_box_select" id="select">
               <option value="Yupqa">Yupqa</option>
               <option value="O'rtacha">O'rtacha</option>
               <option value="Qalin">Qalin</option>
             </select>
             <h2 class="section__pitsa_container_box-title">Kattaligi</h2>
-            <div class="section__pitsa_container_box_sizes">
-              <div class="section__pitsa_container_box_sizes-size active">25cm</div>
-              <div class="section__pitsa_container_box_sizes-size">30cm</div>
-              <div class="section__pitsa_container_box_sizes-size">35cm</div>
+            <div class="section__pitsa_container_box_sizes" id="sizes">
+              <div class="section__pitsa_container_box_sizes-size size active">25cm</div>
+              <div class="section__pitsa_container_box_sizes-size size">30cm</div>
+              <div class="section__pitsa_container_box_sizes-size size">35cm</div>
             </div>
             <h2 class="section__pitsa_container_box-title second">
               Ustiga nima solaylik?
@@ -59,31 +59,35 @@
             <form class="section__pitsa_container_box_form">
               <div class="section__pitsa_container_box_form_box">
                 <label for="Pomidor" class="section__pitsa_container_box_form_box_label">
-                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- pomidor" />
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input products-changed"
+                    value="- pomidor" />
                   Pomidor
                 </label>
                 <label for="Kurka go'shti" class="section__pitsa_container_box_form_box_label">
-                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input"
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input products-changed"
                     value="- kurka go'shti" />
                   Kurka go'shti
                 </label>
                 <label for="Zaytun" class="section__pitsa_container_box_form_box_label">
-                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- zaytun" />
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input products-changed"
+                    value="- zaytun" />
                   Zaytun
                 </label>
               </div>
               <div class="section__pitsa_container_box_form_box">
                 <label for="Tuzlangan Bodring" class="section__pitsa_container_box_form_box_label">
-                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input"
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input products-changed"
                     value="- tuzlangan bodring" />
                   Tuzlangan Bodring
                 </label>
                 <label for="Qo'ziqorin" class="section__pitsa_container_box_form_box_label">
-                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- qo'ziqorin" />
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input products-changed"
+                    value="- qo'ziqorin" />
                   Qo'ziqorin
                 </label>
                 <label for="Qazi" class="section__pitsa_container_box_form_box_label">
-                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input" value="- qazi" />
+                  <input type="checkbox" class="section__pitsa_container_box_form_box_label-input products-changed"
+                    value="- qazi" />
                   Qazi
                 </label>
               </div>
@@ -110,7 +114,7 @@
           <div class="section__pitsa_container_box second">
             <div class="section__pitsa_container_box_result">
               <h2 class="section__pitsa_container_box_result-title">Non:</h2>
-              <p class="section__pitsa_container_box_result-paragraph">
+              <p class="section__pitsa_container_box_result-paragraph" id="select-result">
                 Yupqa
               </p>
             </div>
@@ -118,11 +122,11 @@
               <h2 class="section__pitsa_container_box_results-title">
                 Kattaligi:
               </h2>
-              <p class="section__pitsa_container_box_results-paragraph">
+              <p class="section__pitsa_container_box_results-paragraph" id="size-result">
                 30 cm
               </p>
             </div>
-            <ul class="section__pitsa_container_box_list">
+            <ul class="section__pitsa_container_box_list" id="list">
               <li class="section__pitsa_container_box_list_item">
                 <h2 class="section__pitsa_container_box_list_item-title">
                   Ustida:

@@ -1,57 +1,40 @@
 "use strict";
 
-const array = [];
 
+// Array 
+const selectArray = [];
+const sizesArray = [];
+const productsArray = [];
+const thingProductsArray = [];
+
+// Select Changed
 $(".section__pitsa_container_box_select").addEventListener("change", (e) => {
-  $(".section__pitsa_container_box_result-paragraph").innerHTML = e.target.value;
-  array.push(e.target.value);
+  $(".section__pitsa_container_box_result-paragraph").innerHTML =
+    e.target.value;
+  selectArray.push(e.target.value);
 });
 
 
-for (let i = 0; i < $$(".section__pitsa_container_box_sizes-size").length; i++) {
-  $$(".section__pitsa_container_box_sizes-size")[i].addEventListener("click", (e) => {
-    $(".section__pitsa_container_box_results-paragraph").innerHTML = e.target.innerHTML;
-    array.push(e.target.innerHTML);
-  });
-}
-
-
-for (let i = 0; i < $$(".section__pitsa_container_box_form_box_label-input").length; i++) {
-  const elements = document.createElement("li");
-  $$(".section__pitsa_container_box_form_box_label-input")[i].addEventListener("click", (e) => {
-    if (e.target.checked == true) {
-      elements.innerHTML = e.target.value;
-      elements.classList.add("section__pitsa_container_box_list-item");
-      array.push(e.target.value);
-    } else {
-      elements.innerHTML = "";
-      elements.classList.remove("section__pitsa_container_box_list-item");
-      array.pop();
+// Sizes Result
+for (
+  let i = 0;
+  i < $$(".section__pitsa_container_box_sizes-size").length;
+  i++
+) {
+  $$(".section__pitsa_container_box_sizes-size")[i].addEventListener(
+    "click",
+    (e) => {
+      $(".section__pitsa_container_box_results-paragraph").innerHTML =
+        e.target.innerHTML;
+      sizesArray.push(e.target.innerHTML);
     }
-    $(".section__pitsa_container_box_list").appendChild(elements);
-  });
+  );
 }
 
 
-
-for (let i = 0; i < $$(".section__pitsa_container_box_forms_box_label-input").length; i++) {
-  const element = document.createElement("li");
-  $$(".section__pitsa_container_box_forms_box_label-input")[i].addEventListener("click", (e) => {
-    if (e.target.checked == true) {
-      element.innerHTML = e.target.value;
-      element.classList.add("section__pitsa_container_box_list-item");
-      array.push(e.target.value);
-    } else {
-      element.innerHTML = "";
-      element.classList.remove("section__pitsa_container_box_list-item");
-      array.pop();
-    }
-    $(".section__pitsa_container_box_lists").appendChild(element);
-  });
-}
-
+// The sizes hide and show BgColor Tabs 
 function hideTabSize() {
-  $$(".section__pitsa_container_box_sizes-size").forEach(item => {
+  $$(".section__pitsa_container_box_sizes-size").forEach((item) => {
     item.classList.remove("active");
   });
 }
@@ -64,10 +47,16 @@ hideTabSize();
 showTabSize();
 
 $(".section__pitsa_container_box_sizes").addEventListener("click", (e) => {
-  if (e.target && e.target.classList.contains("section__pitsa_container_box_sizes-size")) {
-    for (let i = 0; i < $$(".section__pitsa_container_box_sizes-size").length; i++) {
+  if (
+    e.target &&
+    e.target.classList.contains("section__pitsa_container_box_sizes-size")
+  ) {
+    for (
+      let i = 0;
+      i < $$(".section__pitsa_container_box_sizes-size").length;
+      i++
+    ) {
       if (e.target == $$(".section__pitsa_container_box_sizes-size")[i]) {
-        console.log($$(".section__pitsa_container_box_sizes-size")[i].innerHTML);
         hideTabSize();
         showTabSize(i);
       }
@@ -75,15 +64,67 @@ $(".section__pitsa_container_box_sizes").addEventListener("click", (e) => {
   }
 });
 
+// Products Changed
+for (
+  let i = 0;
+  i < $$(".section__pitsa_container_box_form_box_label-input").length;
+  i++
+) {
+  const elements = document.createElement("li");
+  $$(".section__pitsa_container_box_form_box_label-input")[i].addEventListener(
+    "click",
+    (e) => {
+      if (e.target.checked == true) {
+        elements.innerHTML = e.target.value;
+        elements.classList.add("section__pitsa_container_box_list-item");
+        productsArray.push(e.target.value);
+      } else {
+        elements.innerHTML = "";
+        elements.classList.remove("section__pitsa_container_box_list-item");
+        productsArray.pop();
+      }
+      $(".section__pitsa_container_box_list").appendChild(elements);
+    }
+  );
+}
+
+// Products kinds of Things 
+for (
+  let i = 0;
+  i < $$(".section__pitsa_container_box_forms_box_label-input").length;
+  i++
+) {
+  const element = document.createElement("li");
+  $$(".section__pitsa_container_box_forms_box_label-input")[i].addEventListener(
+    "click",
+    (e) => {
+      if (e.target.checked == true) {
+        element.innerHTML = e.target.value;
+        element.classList.add("section__pitsa_container_box_list-item");
+        thingProductsArray.push(e.target.value);
+      } else {
+        element.innerHTML = "";
+        element.classList.remove("section__pitsa_container_box_list-item");
+        thingProductsArray.pop();
+      }
+      $(".section__pitsa_container_box_lists").appendChild(element);
+    }
+  );
+}
+
 
 $(".section__pitsa_container_box-btn").addEventListener("click", (e) => {
-  if (array.length <= 4) {
+  if (
+    selectArray.length <= 0 ||
+    sizesArray.length <= 0 ||
+    productsArray.length <= 0 ||
+    thingProductsArray.length <= 0
+  ) {
+    $(".modal").setAttribute("class", "modal active");
     $("#check").setAttribute("class", "fa fa-x");
-    $(".modal").setAttribute("class", "modal active");
-    console.log("Ichi bosh")
   } else {
-    $("#check").setAttribute("class", "fa fa-check");
     $(".modal").setAttribute("class", "modal active");
+    $("#check").setAttribute("class", "fa fa-check");
   }
 });
 

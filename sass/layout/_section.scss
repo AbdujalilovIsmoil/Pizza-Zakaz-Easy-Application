@@ -8,12 +8,14 @@
   justify-content: center;
   align-items: center;
   display: none;
+
   &.active {
     display: block;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   &__container {
     background-color: white;
     height: 300px;
@@ -22,6 +24,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
     .fa-check {
       background-color: green;
       color: white;
@@ -33,6 +36,7 @@
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
     }
+
     .fa-x {
       background-color: tomato;
       color: white;
@@ -44,6 +48,7 @@
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
     }
+
     &_x {
       color: black;
       font-size: 70px;
@@ -61,82 +66,102 @@
       font-weight: 400;
       font-size: 35px;
       text-align: center;
+
       padding: {
         top: 25px;
         bottom: 25px;
       }
     }
+
     &_container {
       display: flex;
       justify-content: space-between;
       max-width: 90%;
+
       &_box {
         &_result {
           display: flex;
           align-items: center;
           gap: 10px;
+
           margin: {
             top: 20px;
             bottom: 20px;
           }
+
           &-title {
             font-size: 20px;
           }
+
           &-paragraph {
             font-size: 20px;
           }
         }
+
         &_results {
           display: flex;
           align-items: center;
           gap: 10px;
+
           margin: {
             top: 20px;
             bottom: 20px;
           }
+
           &-title {
             font-size: 20px;
           }
+
           &-paragraph {
             font-size: 20px;
           }
         }
+
         &_list {
           &_item {
             &-title {
               font-size: 20px;
+
               margin: {
                 bottom: 10px;
               }
             }
           }
+
           &-item {
             font-size: 20px;
+
             margin: {
               top: 10px;
               bottom: 10px;
             }
           }
         }
+
         &_lists {
           &_item {
             &-title {
               font-size: 20px;
+
               margin: {
                 bottom: 10px;
               }
             }
           }
+
           &-item {
             font-size: 20px;
+
             margin: {
               top: 10px;
               bottom: 10px;
             }
           }
         }
+
         &-title {
           font-size: 20px;
+
           &.second {
             margin: {
               top: 30px;
@@ -144,6 +169,7 @@
             }
           }
         }
+
         &-btn {
           padding: {
             top: 15px;
@@ -151,41 +177,53 @@
             right: 30px;
             left: 30px;
           }
+
           font-size: 20px;
           background-color: tomato;
           border: 1px solid tomato;
           color: white;
+
           margin: {
             top: 30px;
           }
+
           transition: all 0.3s linear;
+
           &:hover {
             background-color: transparent;
             color: tomato;
           }
         }
+
         &_select {
           margin: {
             top: 10px;
             bottom: 50px;
           }
+
           width: 50%;
+
           padding: {
             top: 5px;
             bottom: 5px;
           }
+
           font-size: 20px;
           outline: none;
           cursor: pointer;
         }
+
         &_sizes {
           display: flex;
           align-items: center;
           gap: 10px;
+
           margin: {
             top: 30px;
           }
+
           gap: 50px;
+
           &-size {
             height: 100px;
             width: 100px;
@@ -201,66 +239,82 @@
             font-size: 20px;
             font-weight: 1000;
             cursor: pointer;
+
             &.active {
               background-color: black;
               color: white;
             }
           }
         }
+
         &_form {
           display: flex;
           justify-content: space-between;
           width: 150%;
+
           &_box {
             display: flex;
             flex-direction: column;
+
             &_label {
               display: flex;
               align-items: center;
               gap: 10px;
               font-size: 20px;
+
               &-input {
                 height: 30px;
                 width: 30px;
+
                 margin: {
                   top: 5px;
                   bottom: 5px;
                 }
+
                 cursor: pointer;
               }
             }
           }
         }
+
         &_forms {
           display: flex;
           justify-content: space-between;
           width: 150%;
+
           &_box {
             display: flex;
             flex-direction: column;
+
             &_label {
               display: flex;
               align-items: center;
               gap: 10px;
               font-size: 20px;
+
               &-input {
                 height: 30px;
                 width: 30px;
+
                 margin: {
                   top: 5px;
                   bottom: 5px;
                 }
+
                 cursor: pointer;
               }
             }
           }
         }
+
         #form {
           width: 98%;
         }
       }
+
       &_box.second {
         position: relative;
+
         &::after {
           content: "";
           position: absolute;

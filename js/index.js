@@ -1,7 +1,6 @@
 "use strict";
 
-
-// Array 
+// Array
 const selectArray = [];
 const sizesArray = [];
 const productsArray = [];
@@ -13,7 +12,6 @@ $(".section__pitsa_container_box_select").addEventListener("change", (e) => {
     e.target.value;
   selectArray.push(e.target.value);
 });
-
 
 // Sizes Result
 for (
@@ -31,8 +29,7 @@ for (
   );
 }
 
-
-// The sizes hide and show BgColor Tabs 
+// The sizes hide and show BgColor Tabs
 function hideTabSize() {
   $$(".section__pitsa_container_box_sizes-size").forEach((item) => {
     item.classList.remove("active");
@@ -88,7 +85,7 @@ for (
   );
 }
 
-// Products kinds of Things 
+// Products kinds of Things
 for (
   let i = 0;
   i < $$(".section__pitsa_container_box_forms_box_label-input").length;
@@ -112,13 +109,11 @@ for (
   );
 }
 
-
 $(".section__pitsa_container_box-btn").addEventListener("click", (e) => {
   if (
     selectArray.length <= 0 ||
     sizesArray.length <= 0 ||
-    productsArray.length <= 0 ||
-    thingProductsArray.length <= 0
+    productsArray.length <= 0
   ) {
     $(".modal").setAttribute("class", "modal active");
     $("#check").setAttribute("class", "fa fa-x");
@@ -128,18 +123,28 @@ $(".section__pitsa_container_box-btn").addEventListener("click", (e) => {
   }
 });
 
-$(".modal__container_x").addEventListener("click", () => {
-  $(".modal").classList.remove("active");
-});
-
-$(".modal").addEventListener("click", () => {
-  if ($(".modal")) {
+this.addEventListener("keydown", (e) => {
+  if (e.code == "Escape") {
     $(".modal").classList.remove("active");
   }
 });
 
-this.addEventListener("keydown", (e) => {
-  if (e.code == "Escape") {
-    $(".modal").classList.remove("active");
+$("#modal-remove").addEventListener("click", () => {
+  if (
+    selectArray.length <= 0 ||
+    sizesArray.length <= 0 ||
+    productsArray.length <= 0
+  ) {
+    $(".modal").setAttribute("class", "modal");
+    $("#check").setAttribute("class", "fa fa-x");
+  }
+  if (
+    selectArray.length != 0 &&
+    sizesArray.length != 0 &&
+    productsArray.length != 0
+  ) {
+    $(".modal").setAttribute("class", "modal");
+    $("#check").setAttribute("class", "fa fa-x");
+    $("#modal-remove").setAttribute("href", "index.html");
   }
 });

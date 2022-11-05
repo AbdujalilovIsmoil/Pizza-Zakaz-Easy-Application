@@ -200,7 +200,7 @@ $(".modal").addEventListener("click", (e) => {
     window.location.pathname = "index.html";
     $(".modal").setAttribute("class", "modal");
     $("#check").setAttribute("class", "fa fa-x");
-    $("#modal").setAttribute("href", "index.html");
+    $("#modal").setAttribute("href", "");
     $("body").style.overflow = "";
   }
 });

@@ -63,9 +63,7 @@
 .section {
   &__pitsa {
     &_content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexbox(flex, center, center, row);
       position: relative;
 
       &-title {
@@ -89,8 +87,7 @@
 
 
     &_container {
-      display: flex;
-      justify-content: space-between;
+      @include flexbox(flex, space-between, none, row);
       max-width: 90%;
 
       &_box {
@@ -109,8 +106,7 @@
         }
 
         &_result {
-          display: flex;
-          align-items: center;
+          @include flexbox(flex, stretch, center, row);
           gap: 10px;
 
           margin: {
@@ -128,8 +124,7 @@
         }
 
         &_results {
-          display: flex;
-          align-items: center;
+          @include flexbox(flex, none, center, row);
           gap: 10px;
 
           margin: {
@@ -243,8 +238,7 @@
         }
 
         &_sizes {
-          display: flex;
-          align-items: center;
+          @include flexbox(flex, none, center);
           gap: 10px;
 
           margin: {
@@ -262,9 +256,7 @@
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexbox(flex, center, center);
             font-size: 20px;
             font-weight: 1000;
             cursor: pointer;
@@ -277,17 +269,14 @@
         }
 
         &_form {
-          display: flex;
-          justify-content: space-between;
+          @include flexbox(flex, space-between, none, row);
           width: 150%;
 
           &_box {
-            display: flex;
-            flex-direction: column;
+            @include flexbox(flex, stretch, stretch, column);
 
             &_label {
-              display: flex;
-              align-items: center;
+              @include flexbox(flex, none, center, row);
               gap: 10px;
               font-size: 20px;
 
@@ -307,17 +296,14 @@
         }
 
         &_forms {
-          display: flex;
-          justify-content: space-between;
+          @include flexbox(flex, space-between, none, row);
           width: 150%;
 
           &_box {
-            display: flex;
-            flex-direction: column;
+            @include flexbox(flex, stretch, none, column);
 
             &_label {
-              display: flex;
-              align-items: center;
+              @include flexbox(flex, stretch, center, row);
               gap: 10px;
               font-size: 20px;
 
@@ -354,9 +340,7 @@
   .section {
     &__pitsa {
       &_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox(flex, space-between, center, row);
         position: relative;
 
         &-title {
@@ -380,8 +364,7 @@
 
 
       &_container {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(flex, space-between, none, row);
         max-width: 90%;
 
         &_box {
@@ -408,8 +391,7 @@
           }
 
           &_result {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, row);
             gap: 10px;
 
             margin: {
@@ -427,8 +409,7 @@
           }
 
           &_results {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, row);
             gap: 10px;
 
             margin: {
@@ -542,8 +523,7 @@
           }
 
           &_sizes {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, row);
             gap: 10px;
 
             margin: {
@@ -561,9 +541,7 @@
               -moz-border-radius: 50%;
               -ms-border-radius: 50%;
               -o-border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include flexbox(flex, center, center, row);
               font-size: 20px;
               font-weight: 1000;
               cursor: pointer;
@@ -576,17 +554,14 @@
           }
 
           &_form {
-            display: flex;
-            justify-content: space-between;
+            @include flexbox(flex, space-between, stretch, row);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
-                display: flex;
-                align-items: center;
+                @include flexbox(flex, stretch, center, row);
                 gap: 10px;
                 font-size: 20px;
 
@@ -606,17 +581,14 @@
           }
 
           &_forms {
-            display: flex;
-            justify-content: space-between;
+            @include flexbox(flex, space-between, stretch, row);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
-                display: flex;
-                align-items: center;
+                @include flexbox(flex, stretch, center, row);
                 gap: 10px;
                 font-size: 20px;
 
@@ -643,10 +615,7 @@
         &_box.second {
           position: fixed;
           min-height: 75vh;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
+          @include flexbox(flex, center, center, column);
           width: 100%;
           background-color: white;
           text-align: center;
@@ -671,9 +640,7 @@
   .section {
     &__pitsa {
       &_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox(flex, space-between, center, row);
         position: relative;
 
         &-title {
@@ -697,8 +664,7 @@
 
 
       &_container {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(flex, space-between, stretch, row);
         max-width: 90%;
 
         &_box {
@@ -725,8 +691,7 @@
           }
 
           &_result {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, row);
             gap: 10px;
 
             margin: {
@@ -744,8 +709,7 @@
           }
 
           &_results {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, row);
             gap: 10px;
 
             margin: {
@@ -859,8 +823,7 @@
           }
 
           &_sizes {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, row);
             gap: 10px;
 
             margin: {
@@ -878,9 +841,7 @@
               -moz-border-radius: 50%;
               -ms-border-radius: 50%;
               -o-border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include flexbox(flex, center, center, row);
               font-size: 20px;
               font-weight: 1000;
               cursor: pointer;
@@ -893,18 +854,14 @@
           }
 
           &_form {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
+            @include flexbox(flex, space-between, stretch, column);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
-                display: flex;
-                align-items: center;
+                @include flexbox(flex, stretch, center, stretch);
                 gap: 10px;
                 font-size: 20px;
 
@@ -924,17 +881,14 @@
           }
 
           &_forms {
-            display: flex;
-            justify-content: space-between;
+            @include flexbox(flex, space-between, stretch, stretch);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
-                display: flex;
-                align-items: center;
+                @include flexbox(flex, stretch, center, stretch);
                 gap: 10px;
                 font-size: 20px;
 
@@ -961,10 +915,7 @@
         &_box.second {
           position: fixed;
           min-height: 75vh;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
+          @include flexbox(flex, center, center, column);
           width: 100%;
           background-color: white;
           text-align: center;
@@ -992,25 +943,19 @@
     width: 100%;
     position: fixed;
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(flex, center, center, stretch);
     display: none;
 
     &.active {
       display: block;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexbox(flex, center, center, stretch);
     }
 
     &__container {
       background-color: white;
       height: 300px;
       width: 600px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexbox(flex, center, center, stretch);
       position: relative;
 
       .fa-check {
@@ -1051,9 +996,7 @@
   .section {
     &__pitsa {
       &_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox(flex, space-between, center, stretch);
         position: relative;
 
         &-title {
@@ -1077,8 +1020,7 @@
 
 
       &_container {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(flex, space-between, stretch, stretch);
         max-width: 90%;
 
         &_box {
@@ -1105,8 +1047,7 @@
           }
 
           &_result {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, stretch);
             gap: 10px;
 
             margin: {
@@ -1124,8 +1065,7 @@
           }
 
           &_results {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, stretch);
             gap: 10px;
 
             margin: {
@@ -1239,9 +1179,7 @@
           }
 
           &_sizes {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
+            @include flexbox(flex, stretch, center, column);
             gap: 10px;
 
             margin: {
@@ -1260,9 +1198,7 @@
               -moz-border-radius: 50%;
               -ms-border-radius: 50%;
               -o-border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include flexbox(flex, center, center, stretch);
               font-size: 20px;
               font-weight: 1000;
               cursor: pointer;
@@ -1275,18 +1211,14 @@
           }
 
           &_form {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
+            @include flexbox(flex, space-between, stretch, column);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
-                display: flex;
-                align-items: center;
+                @include flexbox(flex, stretch, center, stretch);
                 gap: 10px;
                 font-size: 20px;
 
@@ -1306,17 +1238,14 @@
           }
 
           &_forms {
-            display: flex;
-            justify-content: space-between;
+            @include flexbox(flex, space-between, stretch, stretch);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
-                display: flex;
-                align-items: center;
+                @include flexbox(flex, stretch, center, stretch);
                 gap: 10px;
                 font-size: 20px;
 
@@ -1337,17 +1266,14 @@
 
           #form {
             width: 98%;
-            flex-direction: column;
+            @include flexbox(flex, stretch, stretch, column);
           }
         }
 
         &_box.second {
           position: fixed;
           min-height: 75vh;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
+          @include flexbox(flex, center, center, column);
           width: 100%;
           background-color: white;
           text-align: center;
@@ -1372,9 +1298,7 @@
   .section {
     &__pitsa {
       &_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox(flex, space-between, center, stretch);
         position: relative;
 
         &-title {
@@ -1398,8 +1322,7 @@
 
 
       &_container {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(flex, space-between, stretch, stretch);
         max-width: 90%;
 
         &_box {
@@ -1426,8 +1349,7 @@
           }
 
           &_result {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, stretch);
             gap: 10px;
 
             margin: {
@@ -1445,8 +1367,7 @@
           }
 
           &_results {
-            display: flex;
-            align-items: center;
+            @include flexbox(flex, stretch, center, stretch);
             gap: 10px;
 
             margin: {
@@ -1560,9 +1481,7 @@
           }
 
           &_sizes {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
+            @include flexbox(flex, stretch, center, column);
             gap: 10px;
 
             margin: {
@@ -1581,9 +1500,7 @@
               -moz-border-radius: 50%;
               -ms-border-radius: 50%;
               -o-border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include flexbox(flex, center, center, stretch);
               font-size: 20px;
               font-weight: 1000;
               cursor: pointer;
@@ -1596,18 +1513,16 @@
           }
 
           &_form {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
+            @include flexbox(flex, space-between, stretch, column);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
                 display: flex;
                 align-items: center;
+                @include flexbox(flex, stretch, center, stretch);
                 gap: 10px;
                 font-size: 20px;
 
@@ -1627,17 +1542,14 @@
           }
 
           &_forms {
-            display: flex;
-            justify-content: space-between;
+            @include flexbox(flex, space-between, stretch, stretch);
             width: 150%;
 
             &_box {
-              display: flex;
-              flex-direction: column;
+              @include flexbox(flex, stretch, stretch, column);
 
               &_label {
-                display: flex;
-                align-items: center;
+                @include flexbox(flex, stretch, center, stretch);
                 gap: 10px;
                 font-size: 20px;
 
@@ -1658,17 +1570,14 @@
 
           #form {
             width: 98%;
-            flex-direction: column;
+            @include flexbox(flex, stretch, stretch, column);
           }
         }
 
         &_box.second {
           position: fixed;
           min-height: 75vh;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
+          @include flexbox(flex, center, center, column);
           width: 100%;
           background-color: white;
           text-align: center;

@@ -109,6 +109,7 @@ for (
   );
 }
 
+// Modal Inputs Changed Function
 $(".section__pitsa_container_box-btn").addEventListener("click", (e) => {
   if (
     selectArray.length <= 0 ||
@@ -117,17 +118,24 @@ $(".section__pitsa_container_box-btn").addEventListener("click", (e) => {
   ) {
     $(".modal").setAttribute("class", "modal active");
     $("#check").setAttribute("class", "fa fa-x");
+    $("body").style.overflow = "hidden";
   } else {
     $(".modal").setAttribute("class", "modal active");
     $("#check").setAttribute("class", "fa fa-check");
+    $("body").style.overflow = "hidden";
   }
 });
+
+// Modal Remove Keyboard code
 
 this.addEventListener("keydown", (e) => {
   if (e.code == "Escape") {
     $(".modal").classList.remove("active");
+    $("body").style.overflow = "";
   }
 });
+
+// Modal Remove
 
 $("#modal-remove").addEventListener("click", () => {
   if (
@@ -146,13 +154,53 @@ $("#modal-remove").addEventListener("click", () => {
     $(".modal").setAttribute("class", "modal");
     $("#check").setAttribute("class", "fa fa-x");
     $("#modal-remove").setAttribute("href", "index.html");
+    $("body").style.overflow = "";
   }
 });
 
-$("#shop-cart").addEventListener("click",()=> {
-  if($("#section-pitsa-second").classList.contains("active")){
+// Shop-Cart Navbar Open and Close
+
+$("#shop-cart").addEventListener("click", () => {
+  if ($("#section-pitsa-second").classList.contains("active")) {
     $("#section-pitsa-second").classList.remove("active");
-  }else {
+    $("body").style.overflow = "hidden";
+  } else {
     $("#section-pitsa-second").classList.add("active");
+    $("body").style.overflow = "";
+  }
+});
+
+// Keyboard Code
+
+this.addEventListener("keydown", (e) => {
+  if (e.code == "Escape") {
+    $("#section-pitsa-second").classList.add("active");
+    $("body").style.overflow = "";
+  }
+});
+
+// Modal Open ad Close
+
+$(".modal").addEventListener("click", (e) => {
+  if (e.target == $(".modal")) {
+    if (
+      selectArray.length <= 0 ||
+      sizesArray.length <= 0 ||
+      productsArray.length <= 0
+    ) {
+      $(".modal").setAttribute("class", "modal");
+      $("#check").setAttribute("class", "fa fa-x");
+    }
+  }
+  if (
+    selectArray.length != 0 &&
+    sizesArray.length != 0 &&
+    productsArray.length != 0
+  ) {
+    window.location.pathname = "index.html";
+    $(".modal").setAttribute("class", "modal");
+    $("#check").setAttribute("class", "fa fa-x");
+    $("#modal").setAttribute("href", "index.html");
+    $("body").style.overflow = "";
   }
 });

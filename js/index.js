@@ -163,10 +163,8 @@ $("#modal-remove").addEventListener("click", () => {
 $("#shop-cart").addEventListener("click", () => {
   if ($("#section-pitsa-second").classList.contains("active")) {
     $("#section-pitsa-second").classList.remove("active");
-    $("body").style.overflow = "hidden";
   } else {
     $("#section-pitsa-second").classList.add("active");
-    $("body").style.overflow = "";
   }
 });
 
